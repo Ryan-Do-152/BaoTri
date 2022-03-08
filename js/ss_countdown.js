@@ -34,7 +34,7 @@ var jQuery_1_11_1 = jQuery_1_11_1 || $.noConflict();
 					$errorContainer = $form.find(".ss-error-container");
 				$errorContainer.css({"color": "#FF0000"}).html("").hide();
 				if($emailAddress.val() == "") {
-					$errorContainer.html("Vui lòng điền địa chỉ email của bạn!").fadeIn();
+					$errorContainer.html("Please fill in your email address!").fadeIn();
 				}
 				else {
 					var re = /([0-9a-zA-Z\.\-\_]+)@([0-9a-zA-Z\.\-\_]+)\.([0-9a-zA-Z\.\-\_]+)/,
@@ -51,7 +51,7 @@ var jQuery_1_11_1 = jQuery_1_11_1 || $.noConflict();
 							url: "subscribe/subscribe.php",
 							success: function(){
 								$emailAddress.val("");
-								$errorContainer.css({"color": "#39F"}).html("Cảm ơn bạn đã đăng ký!").fadeIn();
+								$errorContainer.css({"color": "#39F"}).html("Thank you for registering!").fadeIn();
 								setTimeout(function(){
 									$errorContainer.css({"color": "#FF0000"}).html("").hide();
 								}, 3000);
